@@ -2,12 +2,15 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: A clone of a BigQuery app db
     database: dbt-tutorial
     schema: jaffle_shop
     tables:
       - name: customers
+        description: Raw cust data
         columns:
           - name: id
+            description: Primary key for customer data
             tests:
               - unique
               - not_null
@@ -15,6 +18,7 @@ sources:
       - name: orders
         columns:
           - name: id
+            description: Primary key for orders data
             tests:
               - unique              
               - not_null
